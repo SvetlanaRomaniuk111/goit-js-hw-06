@@ -2,9 +2,9 @@ const inputText = document.querySelector('#name-input');
 const outputText = document.querySelector('#name-output');
 
 const inputYourText = ({ textContent }) => {
-	inputText.value === ''
+	inputText.value.trim() === ''
 		? (outputText.innerText = 'Anonymous')
-		: (outputText.innerText = inputText.value);
+		: (outputText.innerText = inputText.value.trim());
 };
 inputText.addEventListener('input', inputYourText);
 
@@ -13,10 +13,10 @@ inputText.addEventListener('input', inputYourText);
 // const outputText = document.querySelector('#name-output');
 
 // const inputYourText = ({ textContent }) => {
-// 	if (inputText.value === '') {
+// 	if (inputText.value.trim() === '') {
 // 		outputText.innerHTML = 'Anonymous';
 // 	} else {
-// 		outputText.innerHTML = inputText.value;
+// 		outputText.innerHTML = inputText.value.trim();
 // 	}
 // };
 // inputText.addEventListener('input', inputYourText);
